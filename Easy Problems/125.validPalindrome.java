@@ -6,9 +6,9 @@ class Solution {
         while(n <= str.length-1){
             s +=str[n++];
         }
-        char[] c = s.replaceAll("_","").toLowerCase().toCharArray();
-        for(int i=0, j=c.length-1; i<j; i++, j--){
-            if (c[i] != c[j]) return false;
+        s = s.replaceAll("_","").toLowerCase();
+        for(int i=0, j=s.length()-1; i<j; i++, j--){
+            if (s.charAt(i) != s.charAt(j)) return false;
         }
         return true;
     }
